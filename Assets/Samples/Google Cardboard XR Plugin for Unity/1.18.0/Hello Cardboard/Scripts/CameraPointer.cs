@@ -26,6 +26,17 @@ public class CameraPointer : MonoBehaviour
 {
     private const float _maxDistance = 10;
     private GameObject _gazedAtObject = null;
+    int layerMask;
+    int suelo;
+    [SerializeField]
+    private GameObject mira;
+    [SerializeField]
+    private GameObject player;
+    private void Start()
+    {
+        layerMask = 1 << LayerMask.NameToLayer("interactuable");
+        suelo = 1 << LayerMask.NameToLayer("suelo");
+    }
 
     /// <summary>
     /// Update is called once per frame.
@@ -34,8 +45,10 @@ public class CameraPointer : MonoBehaviour
     {
         // Casts ray towards camera's forward direction, to detect if a GameObject is being gazed
         // at.
+
+        mira.transform.position = transform.position + transform.forward * _maxDistance;
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, _maxDistance, layerMask))
         {
             // GameObject detected in front of the camera.
             if (_gazedAtObject != hit.transform.gameObject)
@@ -54,9 +67,49 @@ public class CameraPointer : MonoBehaviour
         }
 
         // Checks for screen touches.
-        if (Google.XR.Cardboard.Api.IsTriggerPressed)
+        if (Input.GetButton("R1"))
         {
+            Debug.Log("R1 pulsado");
             _gazedAtObject?.SendMessage("OnPointerClick");
         }
+
+        if (Input.GetButton("R2"))
+        {
+            RaycastHit hitSuelo;
+            if (Physics.Raycast(transform.position, transform.forward, out hitSuelo, _maxDistance, suelo))
+            {
+                player.GetComponent<Teletransporte>().ejecutaSalto(hitSuelo.point);
+            }
+        }
+        /*
+        if (Input.GetButtonDown("R1"))
+        {
+            Debug.Log("R1 pulsado");
+        }
+        */
+
+        //Importante estos son los controles
+        /*
+        R1 B7
+        R2 B6
+
+        Eje y Axis0
+        Eje x Axis1
+
+        A B4
+        B B0
+        C B3
+        D B1
+
+        En android
+
+        A b5
+        B b1
+        C b4
+        D b2
+        R1 9
+        R2 7
+        */
+
     }
 }
