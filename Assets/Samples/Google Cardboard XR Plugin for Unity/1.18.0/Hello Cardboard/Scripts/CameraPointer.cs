@@ -32,10 +32,16 @@ public class CameraPointer : MonoBehaviour
     private GameObject mira;
     [SerializeField]
     private GameObject player;
+
+    private RectTransform miraImagen;
+
+    RaycastHit hitSuelo;
+
     private void Start()
     {
         layerMask = 1 << LayerMask.NameToLayer("interactuable");
         suelo = 1 << LayerMask.NameToLayer("suelo");
+        miraImagen = mira.GetComponentInChildren<RectTransform>();
     }
 
     /// <summary>
@@ -54,28 +60,43 @@ public class CameraPointer : MonoBehaviour
             if (_gazedAtObject != hit.transform.gameObject)
             {
                 // New GameObject.
-                _gazedAtObject?.SendMessage("OnPointerExit");
+                _gazedAtObject?.SendMessage("OnPointerExitObject");
                 _gazedAtObject = hit.transform.gameObject;
-                _gazedAtObject.SendMessage("OnPointerEnter");
+                _gazedAtObject.SendMessage("OnPointerEnterObject");
+                Debug.Log(miraImagen.localScale);
+                miraImagen.localScale = new Vector3(0.7f, 0.7f, 0.7f);
             }
         }
         else
         {
             // No GameObject detected in front of the camera.
-            _gazedAtObject?.SendMessage("OnPointerExit");
+            _gazedAtObject?.SendMessage("OnPointerExitObject");
             _gazedAtObject = null;
+            miraImagen.localScale = new Vector3(1f, 1f, 1f);
+            Vector3 posicion = player.transform.localPosition;
+            posicion.y = 1.5f;
+            if (Physics.Raycast(transform.position, transform.forward, out hitSuelo, _maxDistance, suelo))
+            {
+                player.GetComponent<LineRenderer>().SetPosition(0, posicion);
+                player.GetComponent<LineRenderer>().SetPosition(1, hitSuelo.point);
+            }
+            else
+            {
+                player.GetComponent<LineRenderer>().SetPosition(1, posicion);
+                player.GetComponent<LineRenderer>().SetPosition(1, posicion);
+            }
         }
 
         // Checks for screen touches.
         if (Input.GetButton("R1"))
         {
             Debug.Log("R1 pulsado");
-            _gazedAtObject?.SendMessage("OnPointerClick");
+            _gazedAtObject?.SendMessage("OnPointerClickObject");
         }
 
         if (Input.GetButton("R2"))
         {
-            RaycastHit hitSuelo;
+            
             if (Physics.Raycast(transform.position, transform.forward, out hitSuelo, _maxDistance, suelo))
             {
                 player.GetComponent<Teletransporte>().ejecutaSalto(hitSuelo.point);
