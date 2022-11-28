@@ -15,7 +15,10 @@ public class RecibirGolpe : MonoBehaviour
 
     public void OnPointerEnterObject()
     {
-        StartCoroutine(Entrar());
+        if (entrarBool)
+        {
+            StartCoroutine(Entrar());
+        }
     }
     public void OnPointerExitObject()
     {
@@ -31,7 +34,10 @@ public class RecibirGolpe : MonoBehaviour
     }
     public void OnPointerClickObject()
     {
-        StartCoroutine(Pulsar());
+        if (pulsarBool)
+        {
+            StartCoroutine(Pulsar());
+        }
     }
 
     IEnumerator Entrar()
@@ -63,7 +69,7 @@ public class RecibirGolpe : MonoBehaviour
         }
 
 
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(1f);
         pulsarBool = true;
     }
 }
