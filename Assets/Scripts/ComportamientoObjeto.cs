@@ -29,6 +29,7 @@ public class ComportamientoObjeto : MonoBehaviour
     {
         if (!videoBool)
         {
+            Debug.Log("Entra");
             GameObject television = GameObject.FindGameObjectWithTag("video");
             VideoPlayer video = television.GetComponent<VideoPlayer>();
             video.Play();

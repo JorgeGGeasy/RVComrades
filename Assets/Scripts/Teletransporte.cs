@@ -18,7 +18,7 @@ public class Teletransporte : MonoBehaviour
     {
         tpBool = false;
         transform.position = new Vector3(salto.x, 1.6f, salto.z);
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.3f);
         tpBool = true;
     }
 }
