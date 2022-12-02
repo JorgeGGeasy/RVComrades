@@ -2892,6 +2892,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3464062889214564848, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564848, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.7169812
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564848, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.4292868
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564848, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.2462086
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.47589624
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.05165687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.872856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.094745465
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 12.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -237.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3464062889227618887, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
       propertyPath: m_Name
       value: Player
