@@ -19,6 +19,20 @@ public class ComportamientoObjeto : MonoBehaviour
     private Material materialVerde;
     // Evento Pasar Tarjeta Lector ------------
 
+    // Easter egg -----------
+    [SerializeField]
+    private int botonNumero;
+    [SerializeField]
+    private int mandoNumero;
+    [SerializeField]
+    private int palancaNumero;
+    bool botonBool = false;
+    bool mandoBool = false;
+    bool palancaBool = false;
+    [SerializeField]
+    GameObject videoControl;
+    // Easter egg -----------
+
 
     void Start(){
         materialRojo.color =  Color.HSVToRGB(0,1,1);
@@ -73,6 +87,30 @@ public class ComportamientoObjeto : MonoBehaviour
         }
     }
 
+    public void ActivarBoton(GameObject boton)
+    {
+        if (!botonBool)
+        {
+            StartCoroutine(IEActivarBoton(boton));
+        }
+    }
+
+    public void ActivarMando(GameObject mandos)
+    {
+        if (!mandoBool)
+        {
+            StartCoroutine(IEActivarMando(mandos));
+        }
+    }
+
+    public void ActivarPalanca(GameObject palanca)
+    {
+        if (!palancaBool) 
+        {
+            StartCoroutine(IEActivarPalanca(palanca));
+        }
+    }
+
 
     IEnumerator IEPasarTarjetaLector(){
         
@@ -90,5 +128,39 @@ public class ComportamientoObjeto : MonoBehaviour
         puerta.GetComponent<Animator>().enabled = false; // parar animacion
     }
 
-   
+    IEnumerator IEActivarBoton(GameObject objeto)
+    {
+        objeto.GetComponent<Animator>().Play("Boton");
+        botonBool = true;
+        yield return new WaitForSeconds(1f);
+        botonNumero++;
+        botonBool = false;
+    }
+
+    IEnumerator IEActivarMando(GameObject objeto)
+    {
+        objeto.GetComponent<Animator>().Play("Mando");
+        yield return new WaitForSeconds(1f);
+        mandoNumero++;
+        mandoBool = false;
+    }
+
+    IEnumerator IEActivarPalanca(GameObject objeto)
+    {
+        objeto.GetComponent<Animator>().Play("Palanca");
+        yield return new WaitForSeconds(1f);
+        palancaNumero++;
+        palancaBool = false;
+        ComprobarEasterEgg();
+    }
+
+    public void ComprobarEasterEgg()
+    {
+        if(botonNumero == 2 && palancaNumero == 2 && mandoNumero == 2)
+        {
+            // Aqui se playea el easter egg
+            videoControl.SetActive(true);
+            videoControl.GetComponent<VideoPlayer>().Play();
+        }
+    }
 }
