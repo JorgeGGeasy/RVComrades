@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Video;
 public class ComportamientoObjeto : MonoBehaviour
 {
+    private bool videoBool = false;
     public void EmpezarJuego()
     {
 
@@ -22,6 +23,17 @@ public class ComportamientoObjeto : MonoBehaviour
     public void Salir()
     {
 
+    }
+
+    public void PonerVideoEnTele()
+    {
+        if (!videoBool)
+        {
+            GameObject television = GameObject.FindGameObjectWithTag("video");
+            VideoPlayer video = television.GetComponent<VideoPlayer>();
+            video.Play();
+            videoBool = true;
+        }
     }
 
 }
