@@ -102,35 +102,50 @@ public class CameraPointer : MonoBehaviour
                 player.GetComponent<Teletransporte>().ejecutaSalto(hitSuelo.point);
             }
         }
-        /*
-        if (Input.GetButtonDown("R1"))
+
+        if (Input.GetMouseButtonDown(0))
         {
             Debug.Log("R1 pulsado");
+            _gazedAtObject?.SendMessage("OnPointerClickObject");
         }
-        */
 
-        //Importante estos son los controles
-        /*
-        R1 B7
-        R2 B6
+        if (Input.GetMouseButtonDown(1))
+        {
 
-        Eje y Axis0
-        Eje x Axis1
+            if (Physics.Raycast(transform.position, transform.forward, out hitSuelo, _maxDistance, suelo))
+            {
+                player.GetComponent<Teletransporte>().ejecutaSalto(hitSuelo.point);
+            }
+        }
+            /*
+            if (Input.GetButtonDown("R1"))
+            {
+                Debug.Log("R1 pulsado");
+            }
+            */
 
-        A B4
-        B B0
-        C B3
-        D B1
+            //Importante estos son los controles
+            /*
+            R1 B7
+            R2 B6
 
-        En android
+            Eje y Axis0
+            Eje x Axis1
 
-        A b5
-        B b1
-        C b4
-        D b2
-        R1 9
-        R2 7
-        */
+            A B4
+            B B0
+            C B3
+            D B1
 
-    }
+            En android
+
+            A b5
+            B b1
+            C b4
+            D b2
+            R1 9
+            R2 7
+            */
+
+        }
 }
