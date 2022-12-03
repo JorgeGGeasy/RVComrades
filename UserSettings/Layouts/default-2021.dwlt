@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 77
+  controlID: 18
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 23
+  controlID: 24
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 68
+  controlID: 25
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -308,7 +308,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -26438
+  m_LastSelectedObjectID: 23350
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -346,14 +346,14 @@ MonoBehaviour:
     - {fileID: 7555497861781815623, guid: 667ff0d881c963243a4945a5e8eb9608, type: 2}
     - {fileID: 1220875409799940173, guid: 146dc5e887451304399474dbe26c4236, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.73726314
+    - e00: 1
       e01: 0
       e02: 0
-      e03: -21.86316
+      e03: -14.199951
       e10: 0
-      e11: 0.73726314
+      e11: 1
       e12: 0
-      e13: 116.35999
+      e13: 24.200005
       e20: 0
       e21: 0
       e22: 1
@@ -443,9 +443,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 146dc5e887451304399474dbe26c4236, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: b7a18f3238d66c94491541dccf119b91, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1220875409799940173, guid: 146dc5e887451304399474dbe26c4236, type: 2}
+  - m_Target: {fileID: -6501020851153315307, guid: b7a18f3238d66c94491541dccf119b91, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -499,22 +499,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jorge\Desktop\Clases\4-Cuarto\RVComrades
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: de640000
-    m_LastClickedID: 25822
-    m_ExpandedIDs: 000000009a6400009c640000
+    m_SelectedIDs: 04650000
+    m_LastClickedID: 25860
+    m_ExpandedIDs: 00000000a8640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -530,7 +530,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -542,7 +542,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a6400009c640000
+    m_ExpandedIDs: 00000000a8640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -669,10 +669,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 473.2}
-      m_SelectedIDs: c45d0000
-      m_LastClickedID: 24004
-      m_ExpandedIDs: 1ae0ffffc4ecffff9ceeffffe8eeffff8cf2ffffa6f2ffff70f5ffff82f5ffffc2f5fffff2f5fffffaf8ffffec5d0000f45d0000585e0000725e0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: e884ffff3685ffffa68dffff72bbffffd8c3fffff2f1ffff30fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -729,8 +729,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -100, y: -25.600006}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -100, y: -25.600006}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -921,9 +921,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.32277524, y: 2.2404165, z: 33.285088}
+    m_Target: {x: 3.7428236, y: -0.5509708, z: 22.805805}
     speed: 2
-    m_Value: {x: -0.32277524, y: 2.2404165, z: 33.285088}
+    m_Value: {x: 3.7428236, y: -0.5509708, z: 22.805805}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -970,13 +970,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.009273931, y: 0.08748222, z: -0.0008107339, w: -0.99613667}
+    m_Target: {x: 0.082409024, y: 0.8856501, z: -0.1724513, w: 0.4232407}
     speed: 2
-    m_Value: {x: -0.009273802, y: 0.087481, z: -0.0008107226, w: -0.9961228}
+    m_Value: {x: 0.0824074, y: 0.8856327, z: -0.1724479, w: 0.42323238}
   m_Size:
-    m_Target: 1.1277905
+    m_Target: 12.112876
     speed: 2
-    m_Value: 1.1277905
+    m_Value: 12.112876
   m_Ortho:
     m_Target: 0
     speed: 2
