@@ -135,6 +135,7 @@ public class ComportamientoObjeto : MonoBehaviour
         yield return new WaitForSeconds(1f);
         botonNumero++;
         botonBool = false;
+        ComprobarEasterEgg();
     }
 
     IEnumerator IEActivarMando(GameObject objeto)
@@ -143,6 +144,7 @@ public class ComportamientoObjeto : MonoBehaviour
         yield return new WaitForSeconds(1f);
         mandoNumero++;
         mandoBool = false;
+        ComprobarEasterEgg();
     }
 
     IEnumerator IEActivarPalanca(GameObject objeto)
@@ -156,6 +158,7 @@ public class ComportamientoObjeto : MonoBehaviour
 
     public void ComprobarEasterEgg()
     {
+        Debug.Log("Hola");
         if(botonNumero == 2 && palancaNumero == 2 && mandoNumero == 2)
         {
             // Aqui se playea el easter egg
