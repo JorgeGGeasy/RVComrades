@@ -295,71 +295,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 54abfb11f3674f9499ae6512ddba24a9, type: 3}
   m_PrefabInstance: {fileID: 140232237}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &145354793
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 145354796}
-  - component: {fileID: 145354795}
-  - component: {fileID: 145354794}
-  m_Layer: 0
-  m_Name: Controlador
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &145354794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145354793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ccf64224dbcada4196aac633488c2c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tarjetaAAnimar: {fileID: 1878555236}
-  puerta: {fileID: 472865854}
-  materialRojo: {fileID: 2100000, guid: 3f32c60352c1eed479da999fbffb9d98, type: 2}
-  materialVerde: {fileID: 2100000, guid: cec5a62d9ab1a924daa618362c112048, type: 2}
-  botonNumero: 0
-  mandoNumero: 0
-  palancaNumero: 0
-  videoControl: {fileID: 1794678965}
---- !u!114 &145354795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145354793}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd68f027e715c44aa8d097000d4cccfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &145354796
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145354793}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4709606, y: 0.95504713, z: 27.380001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &168640154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1269,7 +1204,7 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145354794}
+      - m_Target: {fileID: 1915501886}
         m_TargetAssemblyTypeName: ComportamientoObjeto, Assembly-CSharp
         m_MethodName: ActivarMando
         m_Mode: 2
@@ -1644,7 +1579,7 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145354794}
+      - m_Target: {fileID: 1915501886}
         m_TargetAssemblyTypeName: ComportamientoObjeto, Assembly-CSharp
         m_MethodName: PasarTarjetaLector
         m_Mode: 1
@@ -1780,6 +1715,91 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dd6bfb0929d388541b8a7b67c2e82455, type: 3}
   m_PrefabInstance: {fileID: 680264093}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &707128841
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5324828227723068681, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.7634363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.7002268
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.15143135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068683, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5324828227723068684, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: puerta
+      value: 
+      objectReference: {fileID: 472865854}
+    - target: {fileID: 5324828227723068684, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: materialRojo
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f32c60352c1eed479da999fbffb9d98, type: 2}
+    - target: {fileID: 5324828227723068684, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: videoControl
+      value: 
+      objectReference: {fileID: 1794678965}
+    - target: {fileID: 5324828227723068684, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: materialVerde
+      value: 
+      objectReference: {fileID: 2100000, guid: cec5a62d9ab1a924daa618362c112048, type: 2}
+    - target: {fileID: 5324828227723068684, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: tarjetaAAnimar
+      value: 
+      objectReference: {fileID: 1878555236}
+    - target: {fileID: 5324828227723068684, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: audioClipManager
+      value: 
+      objectReference: {fileID: 1915501883}
+    - target: {fileID: 5324828227723068685, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: m_Name
+      value: Controlador
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
 --- !u!1 &708544713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,7 +2185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &907318993
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2339,7 +2359,7 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145354794}
+      - m_Target: {fileID: 1915501886}
         m_TargetAssemblyTypeName: ComportamientoObjeto, Assembly-CSharp
         m_MethodName: RecogerTarjeta
         m_Mode: 2
@@ -3701,7 +3721,7 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145354794}
+      - m_Target: {fileID: 1915501886}
         m_TargetAssemblyTypeName: ComportamientoObjeto, Assembly-CSharp
         m_MethodName: ActivarBoton
         m_Mode: 2
@@ -4443,6 +4463,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1915501883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5324828227723068680, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+  m_PrefabInstance: {fileID: 707128841}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9925132eac02fa648a87114d1189dc31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1915501886 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5324828227723068684, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+  m_PrefabInstance: {fileID: 707128841}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccf64224dbcada4196aac633488c2c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1987051089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4668,7 +4710,7 @@ MonoBehaviour:
   myEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 145354794}
+      - m_Target: {fileID: 1915501886}
         m_TargetAssemblyTypeName: ComportamientoObjeto, Assembly-CSharp
         m_MethodName: ActivarPalanca
         m_Mode: 2

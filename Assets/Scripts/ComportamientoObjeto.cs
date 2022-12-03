@@ -7,6 +7,8 @@ public class ComportamientoObjeto : MonoBehaviour
     private bool videoBool = false;
     private bool tarjeta = false;
 
+    [SerializeField]
+    private AudioClipManager audioClipManager;
 
     // Evento Pasar Tarjeta Lector -----------
     [SerializeField]
@@ -63,6 +65,7 @@ public class ComportamientoObjeto : MonoBehaviour
     public void RecogerTarjeta(GameObject tarjetaGO){
         tarjeta = true;
         tarjetaGO.SetActive(false);
+        audioClipManager.SeleccionarAudio(5, 0.5f);
 
     }
 
@@ -70,9 +73,7 @@ public class ComportamientoObjeto : MonoBehaviour
         if(tarjeta){ 
             tarjeta = false; 
             StartCoroutine(IEPasarTarjetaLector()); 
-            
         }
-
     }
 
     public void PonerVideoEnTele()
@@ -84,6 +85,7 @@ public class ComportamientoObjeto : MonoBehaviour
             VideoPlayer video = television.GetComponent<VideoPlayer>();
             video.Play();
             videoBool = true;
+            audioClipManager.SeleccionarAudio(0, 0.5f);
         }
     }
 
@@ -116,6 +118,7 @@ public class ComportamientoObjeto : MonoBehaviour
         
         tarjetaAAnimar.SetActive(true);
         tarjetaAAnimar.GetComponent<Animator>().Play("Tarjeta");
+        audioClipManager.SeleccionarAudio(6, 0.5f);
         //empezar animacion de la tarjeta
         yield return new WaitForSeconds(1f); // misma duracion que la animacion
         //empezar animacion de la puerta
@@ -124,14 +127,17 @@ public class ComportamientoObjeto : MonoBehaviour
         materialVerde.color =  Color.HSVToRGB(0.35f,1,1f);
         
         puerta.GetComponent<Animator>().Play("Puerta");
+        audioClipManager.SeleccionarAudio(7, 0.5f);
         yield return new WaitForSeconds(1f);
         puerta.GetComponent<Animator>().enabled = false; // parar animacion
+
     }
 
     IEnumerator IEActivarBoton(GameObject objeto)
     {
         objeto.GetComponent<Animator>().Play("Boton");
         botonBool = true;
+        audioClipManager.SeleccionarAudio(2, 0.5f);
         yield return new WaitForSeconds(1f);
         botonNumero++;
         botonBool = false;
@@ -141,6 +147,7 @@ public class ComportamientoObjeto : MonoBehaviour
     IEnumerator IEActivarMando(GameObject objeto)
     {
         objeto.GetComponent<Animator>().Play("Mando");
+        //audioClipManager.SeleccionarAudio(4, 0.5f);
         yield return new WaitForSeconds(1f);
         mandoNumero++;
         mandoBool = false;
@@ -150,6 +157,7 @@ public class ComportamientoObjeto : MonoBehaviour
     IEnumerator IEActivarPalanca(GameObject objeto)
     {
         objeto.GetComponent<Animator>().Play("Palanca");
+        audioClipManager.SeleccionarAudio(3, 0.5f);
         yield return new WaitForSeconds(1f);
         palancaNumero++;
         palancaBool = false;
