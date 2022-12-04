@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5324828227723068682}
   - component: {fileID: 5324828227723068681}
   - component: {fileID: 5324828227723068680}
+  - component: {fileID: 241914211862454799}
   m_Layer: 0
   m_Name: Controlador
   m_TagString: Untagged
@@ -144,6 +145,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ccf64224dbcada4196aac633488c2c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nave: 0
+  controlesCanvas: {fileID: 0}
   audioClipManager: {fileID: 0}
   tarjetaAAnimar: {fileID: 0}
   puerta: {fileID: 0}
@@ -200,3 +203,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7eb0adceae1d90f46a326b2e1ba4a169, type: 3}
   - {fileID: 8300000, guid: 483459141de56cc45b28b277213455d6, type: 3}
   controlAudio: {fileID: 5324828227723068679}
+--- !u!114 &241914211862454799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324828227723068685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb42af73d868e8348961a23f5c3e1f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personaje: {fileID: 0}
+  speed: 100

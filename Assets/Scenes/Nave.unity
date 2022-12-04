@@ -247,6 +247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 248775848664170049, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2183127061045989657, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
       propertyPath: myEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -377,6 +381,11 @@ GameObject:
 --- !u!1 &75825905 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8704067611943474948, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+  m_PrefabInstance: {fileID: 75825903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &75825906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3464062889214564843, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
   m_PrefabInstance: {fileID: 75825903}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &140232237
@@ -6032,6 +6041,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 241914211862454799, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
+      propertyPath: personaje
+      value: 
+      objectReference: {fileID: 75825906}
     - target: {fileID: 5324828227723068681, guid: ae502c2fbc53ada429cbf443f3f034fa, type: 3}
       propertyPath: menu
       value: 

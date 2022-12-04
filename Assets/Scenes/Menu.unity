@@ -813,6 +813,26 @@ PrefabInstance:
       propertyPath: myEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EmpezarVideo
       objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464062889214564849, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3464062889227618887, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5784,6 +5804,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7272807634974754552, guid: e8bacb7f72ecb924ca95c4d50ce585fd, type: 3}
   m_PrefabInstance: {fileID: 1958981475}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1962917204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3464062889214564843, guid: dc1f96c4870d2ce4091e2c65dd9e5cbd, type: 3}
+  m_PrefabInstance: {fileID: 107277711}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1962917211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962917204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb42af73d868e8348961a23f5c3e1f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  personaje: {fileID: 1962917204}
+  speed: 100
 --- !u!1001 &1971066145
 PrefabInstance:
   m_ObjectHideFlags: 0
