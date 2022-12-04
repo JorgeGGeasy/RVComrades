@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nave.unity
     guid: 48ba5e31155f7314185e8385737cee76
+  - enabled: 1
+    path: Assets/Scenes/Video360.unity
+    guid: 2acf6e639070c9740bc438a4eec2c740
   - enabled: 0
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.18.0/Hello Cardboard/Scenes/HelloCardboard.unity
     guid: 145a2a45d7bc746b19cb68410368bf96

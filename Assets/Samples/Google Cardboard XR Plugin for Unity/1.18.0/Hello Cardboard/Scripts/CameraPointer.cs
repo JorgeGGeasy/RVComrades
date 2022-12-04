@@ -28,6 +28,7 @@ public class CameraPointer : MonoBehaviour
     private GameObject _gazedAtObject = null;
     int layerMask;
     int suelo;
+    int pared;
     [SerializeField]
     private GameObject mira;
     [SerializeField]
@@ -36,11 +37,13 @@ public class CameraPointer : MonoBehaviour
     private RectTransform miraImagen;
 
     RaycastHit hitSuelo;
+    RaycastHit hitPared;
 
     private void Start()
     {
         layerMask = 1 << LayerMask.NameToLayer("interactuable");
         suelo = 1 << LayerMask.NameToLayer("suelo");
+        pared = 1 << LayerMask.NameToLayer("pared");
         miraImagen = mira.GetComponentInChildren<RectTransform>();
     }
 
@@ -77,12 +80,16 @@ public class CameraPointer : MonoBehaviour
             posicion.y = 1.5f;
             if (Physics.Raycast(transform.position, transform.forward, out hitSuelo, _maxDistance, suelo))
             {
-                player.GetComponent<LineRenderer>().SetPosition(0, posicion);
-                player.GetComponent<LineRenderer>().SetPosition(1, hitSuelo.point);
+                if (!Physics.Raycast(transform.position, transform.forward, out hitPared, _maxDistance, pared))
+                {
+                    player.GetComponent<LineRenderer>().SetPosition(0, posicion);
+                    player.GetComponent<LineRenderer>().SetPosition(1, hitSuelo.point);
+                }
+
             }
             else
             {
-                player.GetComponent<LineRenderer>().SetPosition(1, posicion);
+                player.GetComponent<LineRenderer>().SetPosition(0, posicion);
                 player.GetComponent<LineRenderer>().SetPosition(1, posicion);
             }
         }
@@ -117,35 +124,50 @@ public class CameraPointer : MonoBehaviour
                 player.GetComponent<Teletransporte>().ejecutaSalto(hitSuelo.point);
             }
         }
-            /*
-            if (Input.GetButtonDown("R1"))
-            {
-                Debug.Log("R1 pulsado");
-            }
-            */
 
-            //Importante estos son los controles
-            /*
-            R1 B7
-            R2 B6
-
-            Eje y Axis0
-            Eje x Axis1
-
-            A B4
-            B B0
-            C B3
-            D B1
-
-            En android
-
-            A b5
-            B b1
-            C b4
-            D b2
-            R1 9
-            R2 7
-            */
-
+        if (Input.GetButton("R1M"))
+        {
+            Debug.Log("R1 pulsado");
+            _gazedAtObject?.SendMessage("OnPointerClickObject");
         }
+
+        if (Input.GetButton("R2M"))
+        {
+
+            if (Physics.Raycast(transform.position, transform.forward, out hitSuelo, _maxDistance, suelo))
+            {
+                player.GetComponent<Teletransporte>().ejecutaSalto(hitSuelo.point);
+            }
+        }
+        /*
+        if (Input.GetButtonDown("R1"))
+        {
+            Debug.Log("R1 pulsado");
+        }
+        */
+
+        //Importante estos son los controles
+        /*
+        R1 B7
+        R2 B6
+
+        Eje y Axis0
+        Eje x Axis1
+
+        A B4
+        B B0
+        C B3
+        D B1
+
+        En android
+
+        A b5
+        B b1
+        C b4
+        D b2
+        R1 9
+        R2 7
+        */
+
+    }
 }

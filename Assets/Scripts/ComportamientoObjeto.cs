@@ -2,10 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 public class ComportamientoObjeto : MonoBehaviour
 {
     private bool videoBool = false;
     private bool tarjeta = false;
+    private Vector3 posicionControles;
+
+    [SerializeField]
+    private bool nave;
+
+    [SerializeField]
+    private GameObject controlesCanvas;
 
     [SerializeField]
     private AudioClipManager audioClipManager;
@@ -36,30 +44,44 @@ public class ComportamientoObjeto : MonoBehaviour
     // Easter egg -----------
 
 
-    void Start(){
-        materialRojo.color =  Color.HSVToRGB(0,1,1);
-        materialVerde.color =  Color.HSVToRGB(0.35f,1,0.2f);
+    public void Start(){
+        if (nave)
+        {
+            materialRojo.color = Color.HSVToRGB(0, 1, 1);
+            materialVerde.color = Color.HSVToRGB(0.35f, 1, 0.2f);
+        }
+        posicionControles = controlesCanvas.GetComponent<RectTransform>().localPosition;
+        Debug.Log(posicionControles);
     }
 
     public void EmpezarJuego()
     {
-
+        SceneManager.LoadScene("Nave", LoadSceneMode.Single);
     }
 
     public void EmpezarVideo()
     {
-
+        SceneManager.LoadScene("Video360", LoadSceneMode.Single);
     }
 
-    public void Controles()
+    public void Controles(GameObject controles)
     {
 
+        controles.GetComponent<RectTransform>().localPosition = posicionControles;
+        //controles.SetActive(true);
+    }
+    public void CerrarControles(GameObject controles)
+    {
+        controles.GetComponent<RectTransform>().localPosition = new Vector3(-1000,-1000,-1000);
+        //controles.SetActive(false);
     }
 
     public void Salir()
     {
-
+        Application.Quit();
     }
+
+
 
 
     public void RecogerTarjeta(GameObject tarjetaGO){

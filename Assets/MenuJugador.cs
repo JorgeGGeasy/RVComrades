@@ -15,5 +15,18 @@ public class MenuJugador : MonoBehaviour
             menuBool = !menuBool;
             menu.SetActive(menuBool);
         }
+
+        if (Input.GetButton("A"))
+        {
+            menuBool = !menuBool;
+            menu.SetActive(menuBool);
+        }
+
+
+        if (Input.GetButton("AM"))
+        {
+            menuBool = !menuBool;
+            menu.SetActive(menuBool);
+        }
     }
 }
