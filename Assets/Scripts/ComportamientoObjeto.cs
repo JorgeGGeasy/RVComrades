@@ -12,11 +12,9 @@ public class ComportamientoObjeto : MonoBehaviour
     [SerializeField]
     private bool nave;
 
-    [SerializeField]
-    private GameObject controlesCanvas;
+    public GameObject controlesCanvas;
 
-    [SerializeField]
-    private AudioClipManager audioClipManager;
+    public AudioClipManager audioClipManager;
 
     // Evento Pasar Tarjeta Lector -----------
     [SerializeField]

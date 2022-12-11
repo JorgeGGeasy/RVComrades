@@ -6,8 +6,7 @@ public class Teletransporte : MonoBehaviour
 {
     private Coroutine tp;
     private bool tpBool = true;
-    [SerializeField]
-    private AudioClipManager audioClipManager;
+    public AudioClipManager audioClipManager;
 
     public void ejecutaSalto(Vector3 saltoPos)
     {
